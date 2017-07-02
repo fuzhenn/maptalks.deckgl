@@ -10,12 +10,12 @@ const options = {
 const RADIAN = Math.PI / 180;
 
 /**
- * A Layer to render with THREE.JS (http://threejs.org), the most popular library for WebGL. <br>
+ * A Layer to render with DECK.GL (https://github.com/uber/deck.gl), a WebGL data visualization lib. <br>
  *
  * @classdesc
- * A layer to render with THREE.JS
+ * A layer to render with DECK.GL
  * @example
- *  var layer = new maptalks.ThreeLayer('three');
+ *  var layer = new maptalks.DeckGLLayer('deck');
  *
  *  layer.prepareToDraw = function (gl, scene, camera) {
  *      var size = map.getSize();
@@ -40,12 +40,12 @@ DeckGLLayer.mergeOptions(options);
 
 export class DeckGLRenderer extends maptalks.renderer.CanvasLayerRenderer {
 
-    draw() {
+    draw() { 
         super.draw();
         this.renderScene();
     }
 
-    drawOnInteracting() {
+    drawOnInteracting() { 
         super.drawOnInteracting();
         this.renderScene();
     }
