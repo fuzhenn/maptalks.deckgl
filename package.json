@@ -1,11 +1,11 @@
 {
   "name": "maptalks.deckgl",
   "version": "0.0.0",
-  "description": "A maptalks Layer to render with THREE.js.",
+  "description": "A maptalks Layer to render with deck.gl.",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/maptalks/maptalks.deckgl.js.git"
+    "url": "https://github.com/maptalks/maptalks.deckgl.git"
   },
   "main": "dist/maptalks.deckgl.js",
   "scripts": {
