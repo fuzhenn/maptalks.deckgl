@@ -32,9 +32,9 @@ class DeckGLRenderer extends maptalks.renderer.CanvasRenderer {
     resizeCanvas(canvasSize) {
         if (!this.canvas) return;
         const size = canvasSize ? canvasSize : this.getMap().getSize();
-        if (this.canvas.width !== size.width || this.canvas.height !== size.height) {
-            this.canvas.height = retina * size['height'];
-            this.canvas.width = retina * size['width'];
+        if (this.canvas.width !== size.width * retina || this.canvas.height !== size.height * retina) {
+            this.canvas.height = retina * size.height;
+            this.canvas.width = retina * size.width;
             this.gl.viewport(0, 0, this.canvas.width, this.canvas.height);
         }
     }
@@ -53,7 +53,6 @@ class DeckGLRenderer extends maptalks.renderer.CanvasRenderer {
             attributes.preserveDrawingBuffer = true;
             this.gl = this.gl || this._createGLContext(this.canvas, attributes);
         }
-        this.canvas.hh = 1;
         this._createDeck();
     }
 
